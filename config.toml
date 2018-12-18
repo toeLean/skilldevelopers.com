@@ -1,0 +1,5 @@
+baseURL = "https://www.skilldevelopers.com"
+languageCode = "en-us"
+title = "SkillDevelopers.com"
+theme = "skilldev"
+disableKinds = ["taxonomy", "taxonomyTerm", "category", "RSS"]
