@@ -1,0 +1,56 @@
+<div class="topnav-mobile">
+    <div class="topnav-left">
+        <a href="/.htmlhintrc">
+            <img src="{{ .Site.BaseURL }}img/logo.png" alt="SkillDevelopers logo" />
+        </a>
+    </div>
+
+    <div class="topnav-right">
+        <div class="mobile-menu-trigger">
+            <span class="trigger-line"></span>
+            <span class="trigger-line"></span>
+            <span class="trigger-line"></span>
+        </div>
+    </div>
+</div>
+
+<div class="topnav">
+    <div class="topnav-top">
+        <div class="container">
+            <div class="row">
+                <div class="col-12">
+                    <a href="tel:609.455.6896" class="grey phone-link"><img src="{{ .Site.BaseURL }}/img/phone-icon.png" alt="Phone icon" /> 609.455.6896</a>
+                    <form id="search" style="display:none;">
+                        <input type="search" name="search"  v-model="txt" @keyup="search()" @blur="close()"  class="border-radius" placeholder="Search">
+                        <div class="search-results" :style="{'display': showresult?'block':'none'}">
+                          <a v-for="item in result" :href="item.url">{{ printf "{{ item.title }}" }}</a>-->
+                      </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="topnav-bottom">
+        <div class="container">
+            <div class="row">
+                <div class="col-12">
+                    <div class="topnav-left">
+                        <a href="/">
+                            <img src="{{ .Site.BaseURL }}/img/logo.png" alt="SkillDevelopers logo" />
+                        </a>
+                    </div>
+
+                    <div class="topnav-right">
+                        <!--<a href="/browse-sections/" class="grey">Courses</a>-->
+                        <a href="{{ .Site.BaseURL }}/our-approach/index.html" class="grey">Approach</a>
+                        <a href="{{ .Site.BaseURL }}/expertise/index.html" class="grey">Expertise</a>
+                        <a href="{{ .Site.BaseURL }}/sets-us-apart/index.html" class="grey">What Sets Us Apart</a>
+                        <a href="{{ .Site.BaseURL }}/about-us/index.html" class="grey">About</a>
+                        <a href="{{ .Site.BaseURL }}/contact-us/index.html" class="grey">Contact</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

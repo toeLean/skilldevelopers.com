@@ -1,0 +1,48 @@
+<section class="subscribe">
+  <div class="container">
+      <div class="row">
+          <div class="col-12">
+              <div class="subscribe-inner">
+                  <h4 class="light white">Stay up to date, <br>with all our offerings:</h4>
+
+                  <form id="sdSubscribe" action="https://hooks.zapier.com/hooks/catch/2415219/cvm5nu/" method="post">
+                      <div class="left-side">
+                          <div class="inputs-row">
+                              <input type="text" name="first-name" class="rounded light-border" placeholder="First Name">
+                              <input type="text" name="last-name"  class="rounded light-border" placeholder="Last Name">
+                          </div>
+
+                          <div class="inputs-row">
+                              <input type="email" name="email" class="rounded light-border" placeholder="Email">
+                              <input type="tel" name="phone" class="rounded light-border" placeholder="Phone">
+                          </div>
+                      </div>
+
+                      <div class="right-side">
+                          <input type="submit" value="Submit" id="Form-submit" class="button rounded-borders green-bg" />
+                      </div>
+                  </form>
+              </div>
+          </div>
+      </div>
+  </div>
+</section>
+
+<!-- Load jquery -->
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.0/jquery.min.js">
+
+  // POST form data to zapier on submit
+$('#sdSubscribe').submit(function(e){
+    e.preventDefault();
+    $.ajax({
+        url:'https://hooks.zapier.com/hooks/catch/2415219/cvm5nu/',
+        type:'post',
+        data:$('#sdSubscribe').serialize(),
+        success:function(){
+          // Redirect to another success page
+          window.location = "http://skilldevelopers.com/success/";
+        }
+    });
+});
+
+</script>
